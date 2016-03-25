@@ -2,9 +2,10 @@
   "name": "partsbin",
   "version": "1.0.0",
   "description": "A marketplace for buying and selling bike parts.",
+  "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "gulp"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +14,9 @@
     "jade": "^1.11.0"
   },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-live-server": "0.0.29",
+    "gulp-webpack": "^1.5.0",
+    "webpack": "^1.12.14"
   }
 }
