@@ -1,12 +1,11 @@
-var gulp    = require('gulp'),
+var gulp = require('gulp'),
     gls = require('gulp-live-server'),
-    webpack = require('gulp-webpack');
+    webpack = require('gulp-webpack'),
+    webpackConfig = require('./webpack.config.js');
 
 gulp.task('default', function() {
   var server = gls.new('index.js');
   server.start();
-
-  var client_scripts = './public/js/entry.js';
 
   gulp.watch('index.js', server.start.bind(server));
   gulp.watch(['./**/*.css'], function(file) {
@@ -18,12 +17,7 @@ gulp.task('default', function() {
     server.notify.apply(server, [file]);
   })
 
-  gulp.src(client_scripts)
-    .pipe(webpack({
-      watch: true,
-      output: {
-        filename: 'bundle.js'
-      }
-    }))
+  gulp.src('./public/js/entry.js')
+    .pipe(webpack(webpackConfig))
     .pipe(gulp.dest('public/'));
 });
