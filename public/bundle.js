@@ -19709,7 +19709,21 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        'Welcome to PartsBin! toot'
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Welcome to PartsBin'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'What do you think?'
+	        ),
+	        _react2.default.createElement(
+	          'a',
+	          { href: '/signup' },
+	          'Get started!'
+	        )
 	      );
 	    }
 	  }]);
