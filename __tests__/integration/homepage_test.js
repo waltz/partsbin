@@ -8,6 +8,7 @@ const browser = new Browser();
 describe('homepage', () => {
   beforeEach(function(done) {
     browser.visit('/', done);
+    browser.window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = {};
   });
 
   it('should return a page', () => {
