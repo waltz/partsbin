@@ -1,7 +1,9 @@
-var gulp = require('gulp'),
-    gls = require('gulp-live-server'),
-    webpack = require('gulp-webpack'),
-    webpackConfig = require('./webpack.config.js');
+'use strict';
+
+import gulp from 'gulp';
+import gls from 'gulp-live-server';
+import webpack from 'gulp-webpack';
+import webpackConfig from './webpack.config.js';
 
 gulp.task('default', function() {
   var server = gls.new('index.js');
