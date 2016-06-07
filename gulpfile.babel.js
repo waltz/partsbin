@@ -4,6 +4,8 @@ import gulp from 'gulp';
 import gls from 'gulp-live-server';
 import webpack from 'gulp-webpack';
 import webpackConfig from './webpack.config.js';
+import jest from 'gulp-jest';
+import babel from 'gulp-babel';
 
 gulp.task('default', function() {
   var server = gls.new('index.js');
@@ -22,4 +24,14 @@ gulp.task('default', function() {
   gulp.src('./public/js/entry.js')
     .pipe(webpack(webpackConfig))
     .pipe(gulp.dest('public/'));
+});
+
+gulp.task('test', () => {
+  return gulp.src('__tests__/*.js')          
+          .pipe(babel({
+            presets: ['es2015']
+          }))
+          .pipe(jest({
+            verbose: true
+          }));
 });
