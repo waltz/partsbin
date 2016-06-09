@@ -42,8 +42,15 @@ gulp.task('test', () => {
 });
 
 gulp.task('sass', () => {
-  console.log('compiling sass');
+  var bourbonPaths = require('bourbon').includePaths;
+  var neatPaths = require('bourbon-neat').includePaths;
+  var cssPaths = bourbonPaths.concat(neatPaths);
+
+  console.log('Compiling SASS.');
+
   return gulp.src('./sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+      includePaths: cssPaths
+    }).on('error', sass.logError))
     .pipe(gulp.dest('./public/css'));
 });

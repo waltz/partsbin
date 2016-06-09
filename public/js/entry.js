@@ -8,7 +8,6 @@ import Signup from './components/signup.js';
 
 document.addEventListener("DOMContentLoaded", function(event) {
   var container = document.getElementById('container');
-  console.log('barf');
 
   ReactDOM.render((
     <Router history={browserHistory}>

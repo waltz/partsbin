@@ -60,11 +60,11 @@
 
 	var _app2 = _interopRequireDefault(_app);
 
-	var _homepage = __webpack_require__(221);
+	var _homepage = __webpack_require__(222);
 
 	var _homepage2 = _interopRequireDefault(_homepage);
 
-	var _signup = __webpack_require__(222);
+	var _signup = __webpack_require__(223);
 
 	var _signup2 = _interopRequireDefault(_signup);
 
@@ -72,7 +72,6 @@
 
 	document.addEventListener("DOMContentLoaded", function (event) {
 	  var container = document.getElementById('container');
-	  console.log('barf');
 
 	  _reactDom2.default.render(_react2.default.createElement(
 	    _reactRouter.Router,
@@ -25225,6 +25224,10 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
+	var _navigation = __webpack_require__(221);
+
+	var _navigation2 = _interopRequireDefault(_navigation);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25247,7 +25250,8 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { id: 'app' },
+	        _react2.default.createElement(_navigation2.default, null),
 	        this.props.children
 	      );
 	    }
@@ -25260,6 +25264,82 @@
 
 /***/ },
 /* 221 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(158);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _reactRouter = __webpack_require__(159);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Navigation = function (_React$Component) {
+	  _inherits(Navigation, _React$Component);
+
+	  function Navigation() {
+	    _classCallCheck(this, Navigation);
+
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Navigation).apply(this, arguments));
+	  }
+
+	  _createClass(Navigation, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'nav',
+	        null,
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/' },
+	            'PartsBin'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'ul',
+	          null,
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/signup' },
+	              'Sign Up'
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Navigation;
+	}(_react2.default.Component);
+
+	exports.default = Navigation;
+
+/***/ },
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25304,19 +25384,14 @@
 	        'div',
 	        null,
 	        _react2.default.createElement(
-	          'h1',
+	          'h2',
 	          null,
-	          'Welcome to PartsBin'
+	          'What is this?'
 	        ),
 	        _react2.default.createElement(
 	          'p',
 	          null,
-	          'What do you think?'
-	        ),
-	        _react2.default.createElement(
-	          _reactRouter.Link,
-	          { to: '/signup' },
-	          'Get Started!'
+	          'PartsBin is a place for cyclists to buy and sell parts. Get all of that stuff out of your garage and turn it in to even more bits.'
 	        )
 	      );
 	    }
@@ -25328,7 +25403,7 @@
 	exports.default = Homepage;
 
 /***/ },
-/* 222 */
+/* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

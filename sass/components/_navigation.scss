@@ -1,0 +1,25 @@
+nav {
+  h1 {
+    color: $secondary;
+    font-size: 4em;
+    margin: 0;
+
+    a {
+      color: $primary;
+      text-decoration: none;
+
+      &:visited {
+        color: $primary;
+      }
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+}
