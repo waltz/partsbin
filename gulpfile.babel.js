@@ -26,7 +26,7 @@ gulp.task('default', function() {
     server.notify.apply(server, [file]);
   })
 
-  gulp.src('./public/js/entry.js')
+  gulp.src('./client/js/entry.js')
     .pipe(webpack(webpackConfig))
     .pipe(gulp.dest('public/'));
 });
