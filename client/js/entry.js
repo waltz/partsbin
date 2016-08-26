@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     <Router history={browserHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={Homepage} />
-        <Route path="/signup" component={Signup} />
+        <Route path="/sign-up" component={Signup} />
       </Route>
     </Router>
   ), container);
