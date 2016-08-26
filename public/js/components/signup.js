@@ -6,7 +6,7 @@ class Signup extends React.Component {
     return(
       <div>
         <h2>Sign Up!</h2>
-        <form>
+        <form id="signup" action="/user/new" action="post">
           <input type="email" placeholder="Email" required="true" />
           <input type="password" placeholder="Password" required="true" />
           <button>Signup</button>

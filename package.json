@@ -6,17 +6,21 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp",
-    "test": "jest"
+    "test": "jasmine"
   },
-  "author": "",
+  "author": "cj@deepyogurt.org",
   "license": "GPL",
   "dependencies": {
     "bourbon": "^4.2.7",
     "express": "^4.13.4",
     "jade": "^1.11.0",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "passport-local": "^1.0.0",
     "react-router": "^2.4.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.10.1",
     "babel-core": "^6.7.4",
     "babel-jest": "^11.0.1",
     "babel-loader": "^6.2.4",
@@ -30,6 +34,7 @@
     "gulp-live-server": "0.0.29",
     "gulp-sass": "^2.3.1",
     "gulp-webpack": "^1.5.0",
+    "jasmine": "^2.4.1",
     "jest": "^0.1.40",
     "jest-cli": "^0.10.0",
     "phantom": "^2.0.10",
