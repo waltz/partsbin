@@ -21,7 +21,7 @@ gulp.task('default', function() {
     server.notify.apply(server, [file]);
   });
 
-  gulp.watch('./public/bundle.js', function(file) {
+  gulp.watch('./public/index.js', function(file) {
     console.log('fresh js bundle!');
     server.notify.apply(server, [file]);
   })
