@@ -1,3 +1,5 @@
 node_modules
 index.js
 .tags*
+public/index.js
+public/index.css

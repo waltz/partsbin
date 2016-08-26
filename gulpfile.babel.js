@@ -48,9 +48,9 @@ gulp.task('sass', () => {
 
   console.log('Compiling SASS.');
 
-  return gulp.src('./sass/**/*.scss')
+  return gulp.src('./client/sass/**/*.scss')
     .pipe(sass({
       includePaths: cssPaths
     }).on('error', sass.logError))
-    .pipe(gulp.dest('./public/css'));
+    .pipe(gulp.dest('./public/'));
 });

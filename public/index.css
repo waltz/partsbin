@@ -5,10 +5,14 @@ html {
   box-sizing: inherit; }
 
 nav h1 {
+  color: #ACD04C;
   font-size: 4em;
   margin: 0; }
   nav h1 a {
+    color: #7E1559;
     text-decoration: none; }
+    nav h1 a:visited {
+      color: #7E1559; }
 
 nav ul {
   margin: 0;
@@ -20,7 +24,7 @@ nav li {
 body {
   color: #7E1559;
   background-color: #ACD04C;
-  font-family: 'Helvetica', 'Arial', sans-serif; }
+  font-family: 'Avenir', 'Helvetica', 'Arial', sans-serif; }
 
 a {
   color: #FFF7A2; }
