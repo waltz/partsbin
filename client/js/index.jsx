@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, IndexRoute, Route, browserHistory } from 'react-router';
 
-import App from './components/app.js';
-import Homepage from './components/homepage.js';
-import Signup from './components/signup.js';
-import NoMatch from './components/nomatch.js';
+import App from './components/app.jsx';
+import Homepage from './components/homepage.jsx';
+import Signup from './components/signup.jsx';
+import NoMatch from './components/nomatch.jsx';
 
 document.addEventListener("DOMContentLoaded", function(event) {
   var container = document.getElementById('container');

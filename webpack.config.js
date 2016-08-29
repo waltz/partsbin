@@ -1,11 +1,10 @@
 module.exports = {
-  watch: true,
   output: {
     filename: 'index.js'
   },
   module: {
     loaders: [{
-      test: /\.js?$/,
+      test: /\.jsx?$/,
       exclude: /node_modules/,
       loader: 'babel-loader',
       query: {
