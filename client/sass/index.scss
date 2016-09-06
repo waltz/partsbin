@@ -1,9 +1,14 @@
 @import 'colors';
+@import 'forms';
 
 @import 'bourbon';
 @import 'neat';
 
 @import 'components/index';
+
+html {
+  font-size: 16pt;
+}
 
 body {
   color: $primary;
@@ -22,4 +27,13 @@ a {
 
 #container {
   @include outer-container(100%);
+}
+
+button {
+  color: $secondary;
+  background-color: $primary;
+  padding: 1em;
+  margin-bottom: 1em;
+  font-size: 1em;
+  border: 0;
 }

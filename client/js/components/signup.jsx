@@ -7,9 +7,15 @@ class Signup extends React.Component {
       <div>
         <h2>Sign Up!</h2>
         <form id="signup" action="/user/new" action="post">
-          <input type="email" placeholder="Email" required="true" />
-          <input type="password" placeholder="Password" required="true" />
-          <button>Signup</button>
+          <div className="textgroup">
+            <label name="signup--email">Email</label>
+            <input id="signup--email" type="email" required="true" />
+          </div>
+          <div className="textgroup">
+            <label name="signup--password">Password</label>
+            <input id="signup--password" type="password" required="true" />
+          </div>
+          <button type="submit">Signup</button>
         </form>
         {this.props.children}
       </div>
